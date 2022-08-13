@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html  xmlns:th="http://www.thymeleaf.org"  xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8" xmlns:th="http://www.thymeleaf.org">
+    <title>Title</title>
+</head>
+<body>
+<h1>List of Students</h1>
+<table>
+    <thead>
+    <tr>
+        <th>Name</th><th>Number</th><th>Deposit</th><th>SaveType</th><th>Years</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="p:${listcustomer}">
+        <td th:text="${p.getcustname()}"></td>
+        <td th:text="${p.getcustno()}"></td>
+        <td th:text="${p.getcdep()}"></td>
+        <td th:text="${p.getsavtype()}"></td>
+        <td th:text="${p.getnyears()}"></td>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>
